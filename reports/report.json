@@ -1,0 +1,203 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-06-18T07:38:41.230Z",
+    "end": "2025-06-18T07:39:55.638Z",
+    "duration": 74408,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "bcc22f8f-579a-445b-a33b-c467b7af110c",
+      "title": "",
+      "fullFile": "C:\\TFS\\QEAutomation\\Selenium\\BrowserFramework\\Tests\\CP_PDMPART_enh.test.ts",
+      "file": "\\Tests\\CP_PDMPART_enh.test.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6b0497b5-cec9-4b9d-97af-82f9b234c498",
+          "title": "Costpoint PDMPART End-to-End Tests",
+          "fullFile": "C:\\TFS\\QEAutomation\\Selenium\\BrowserFramework\\Tests\\CP_PDMPART_enh.test.ts",
+          "file": "\\Tests\\CP_PDMPART_enh.test.ts",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Costpoint PDMPART End-to-End Tests\"",
+              "fullTitle": "Costpoint PDMPART End-to-End Tests \"before all\" hook in \"Costpoint PDMPART End-to-End Tests\"",
+              "timedOut": false,
+              "duration": 1012,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "return __awaiter(this, void 0, void 0, function* () {\n    browser = yield playwright_1.chromium.launch({\n        headless: process.env.CI === 'true',\n        args: ['--disable-web-security', '--disable-features=VizDisplayCompositor']\n    });\n    const context = yield browser.newContext({\n        viewport: { width: 1920, height: 1080 },\n        ignoreHTTPSErrors: true\n    });\n    page = yield context.newPage();\n    basePO = new CP_BaseClass_enhanced_PO_1.BaseClassPO(page);\n    pdmpartPage = new CP_PDMPART_enhanced_PO_1.PDMPART_PO(page);\n});",
+              "err": {},
+              "uuid": "57405720-a700-43de-b4ee-31cbd0cda1c2",
+              "parentUUID": "6b0497b5-cec9-4b9d-97af-82f9b234c498",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Costpoint PDMPART End-to-End Tests\"",
+              "fullTitle": "Costpoint PDMPART End-to-End Tests \"after all\" hook in \"Costpoint PDMPART End-to-End Tests\"",
+              "timedOut": false,
+              "duration": 237,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "return __awaiter(this, void 0, void 0, function* () {\n    yield (page === null || page === void 0 ? void 0 : page.close());\n    yield (browser === null || browser === void 0 ? void 0 : browser.close());\n});",
+              "err": {},
+              "uuid": "77d7e541-c96b-49d3-b58d-d33d97dd0f91",
+              "parentUUID": "6b0497b5-cec9-4b9d-97af-82f9b234c498",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "87639c4a-6f1d-4fb1-8d05-5c0b7f40abcd",
+              "title": "Authentication and Navigation",
+              "fullFile": "C:\\TFS\\QEAutomation\\Selenium\\BrowserFramework\\Tests\\CP_PDMPART_enh.test.ts",
+              "file": "\\Tests\\CP_PDMPART_enh.test.ts",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should successfully login and navigate to PDMPART application",
+                  "fullTitle": "Costpoint PDMPART End-to-End Tests Authentication and Navigation should successfully login and navigate to PDMPART application",
+                  "timedOut": false,
+                  "duration": 44119,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "return __awaiter(this, void 0, void 0, function* () {\n    // Navigate to application\n    yield basePO.navigate();\n    // Perform login\n    yield basePO.LoginWithUsernamePassword(\"CPSUPERUSER\", \"CPSUPERUSER\");\n    // Navigate to PDMPART application\n    yield basePO.navigateToApp(\"PDMPART\");\n    console.log('✅ Successfully navigated to PDMPART application');\n});",
+                  "err": {},
+                  "uuid": "41f0f6b0-588c-444e-8d82-e9074419f6dc",
+                  "parentUUID": "87639c4a-6f1d-4fb1-8d05-5c0b7f40abcd",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "41f0f6b0-588c-444e-8d82-e9074419f6dc"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 44119,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 120000
+            },
+            {
+              "uuid": "6993e469-5599-4a2a-aa76-921cd7c187b6",
+              "title": "Part Creation",
+              "fullFile": "C:\\TFS\\QEAutomation\\Selenium\\BrowserFramework\\Tests\\CP_PDMPART_enh.test.ts",
+              "file": "\\Tests\\CP_PDMPART_enh.test.ts",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should successfully create a new part",
+                  "fullTitle": "Costpoint PDMPART End-to-End Tests Part Creation should successfully create a new part",
+                  "timedOut": false,
+                  "duration": 29026,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "return __awaiter(this, void 0, void 0, function* () {\n    // Generate unique part ID\n    const generatedPartID = yield basePO.generateRandomValue(10, \"PART\", \"EA\");\n    console.log(`Generated Part ID: ${generatedPartID}`);\n    // Create new part using the enhanced method\n    yield pdmpartPage.createNewPart({\n        partID: generatedPartID,\n        description: \"Automated Test Part\",\n        unitOfMeasure: \"EA\",\n        status: \"Obsolete\",\n        makeOrBuy: \"Make\",\n        partType: \"Tool\"\n    });\n    // Save the part\n    yield basePO.clickSaveAndContinue();\n    // Validate success message\n    yield basePO.validateMessageTextAreaAndClose(\"Record modifications successfully completed.\");\n    console.log(`✅ Part ${generatedPartID} created successfully`);\n});",
+                  "err": {},
+                  "uuid": "69e194fa-df46-4c1d-9f87-1b0041bfb3b7",
+                  "parentUUID": "6993e469-5599-4a2a-aa76-921cd7c187b6",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "69e194fa-df46-4c1d-9f87-1b0041bfb3b7"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 29026,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 120000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 120000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "11.4.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "reports",
+        "reportFilename": "report",
+        "quiet": "false",
+        "overwrite": "true",
+        "html": "true",
+        "json": "true"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

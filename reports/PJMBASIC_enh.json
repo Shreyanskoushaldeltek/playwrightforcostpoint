@@ -1,0 +1,207 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-06-26T09:37:43.031Z",
+    "end": "2025-06-26T09:39:35.185Z",
+    "duration": 112154,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0988e296-08b5-45b8-b026-c6a2d88e99a4",
+      "title": "",
+      "fullFile": "C:\\TFS\\QEAutomation\\Selenium\\BrowserFramework\\Tests\\CP_PJMBASIC_testfileenh.test.ts",
+      "file": "\\Tests\\CP_PJMBASIC_testfileenh.test.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b2764294-63dd-426d-b1a8-bb3c32982f96",
+          "title": "Costpoint PJMBASIC End-to-End Tests",
+          "fullFile": "C:\\TFS\\QEAutomation\\Selenium\\BrowserFramework\\Tests\\CP_PJMBASIC_testfileenh.test.ts",
+          "file": "\\Tests\\CP_PJMBASIC_testfileenh.test.ts",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Costpoint PJMBASIC End-to-End Tests\"",
+              "fullTitle": "Costpoint PJMBASIC End-to-End Tests \"before all\" hook in \"Costpoint PJMBASIC End-to-End Tests\"",
+              "timedOut": false,
+              "duration": 1477,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "return __awaiter(this, void 0, void 0, function* () {\n    browser = yield playwright_1.chromium.launch({\n        headless: process.env.CI === 'true',\n        args: ['--disable-web-security', '--disable-features=VizDisplayCompositor']\n    });\n    const context = yield browser.newContext({\n        viewport: { width: 1920, height: 1080 },\n        ignoreHTTPSErrors: true\n    });\n    page = yield context.newPage();\n    basePO = new CP_BaseClass_PO_1.BaseClassPO(page);\n    pjmbasicPage = new CP_PJMBASIC_PO_enh_1.PJMBASIC_PO(page);\n});",
+              "err": {},
+              "uuid": "e608633a-1b34-4312-afe6-51a887634a9a",
+              "parentUUID": "b2764294-63dd-426d-b1a8-bb3c32982f96",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Costpoint PJMBASIC End-to-End Tests\"",
+              "fullTitle": "Costpoint PJMBASIC End-to-End Tests \"after all\" hook in \"Costpoint PJMBASIC End-to-End Tests\"",
+              "timedOut": false,
+              "duration": 513,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "return __awaiter(this, void 0, void 0, function* () {\n    yield (page === null || page === void 0 ? void 0 : page.close());\n    yield (browser === null || browser === void 0 ? void 0 : browser.close());\n});",
+              "err": {},
+              "uuid": "6df14f0f-e5b8-439f-a52e-961cd5efe386",
+              "parentUUID": "b2764294-63dd-426d-b1a8-bb3c32982f96",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "0c8994b7-029b-41d7-b9a6-7b6b631358ca",
+              "title": "Authentication and Navigation",
+              "fullFile": "C:\\TFS\\QEAutomation\\Selenium\\BrowserFramework\\Tests\\CP_PJMBASIC_testfileenh.test.ts",
+              "file": "\\Tests\\CP_PJMBASIC_testfileenh.test.ts",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should successfully login and navigate to PJMBASIC application",
+                  "fullTitle": "Costpoint PJMBASIC End-to-End Tests Authentication and Navigation should successfully login and navigate to PJMBASIC application",
+                  "timedOut": false,
+                  "duration": 58208,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "return __awaiter(this, void 0, void 0, function* () {\n    try {\n        // Navigate to application\n        yield basePO.navigate();\n        // Perform login\n        yield basePO.LoginWithUsernamePassword(\"CPSUPERUSER\", \"CPSUPERUSER\");\n        // Navigate to PJMBASIC application\n        yield basePO.navigateToApp(\"PJMBASIC\");\n        // Wait a bit for the page to fully load\n        yield page.waitForTimeout(5000);\n        // Debug the current page state\n        yield pjmbasicPage.debugCurrentPage();\n        console.log('✅ Successfully navigated to PJMBASIC application');\n    }\n    catch (error) {\n        console.error('❌ Navigation failed:', error);\n        yield pjmbasicPage.debugCurrentPage();\n        throw error;\n    }\n});",
+                  "err": {},
+                  "uuid": "c3a4e24d-0a7d-419c-b3aa-3f5da0ba70ba",
+                  "parentUUID": "0c8994b7-029b-41d7-b9a6-7b6b631358ca",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "c3a4e24d-0a7d-419c-b3aa-3f5da0ba70ba"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 58208,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 120000
+            },
+            {
+              "uuid": "c73acc0e-6265-45c6-85ab-08303700c2af",
+              "title": "Project Creation",
+              "fullFile": "C:\\TFS\\QEAutomation\\Selenium\\BrowserFramework\\Tests\\CP_PJMBASIC_testfileenh.test.ts",
+              "file": "\\Tests\\CP_PJMBASIC_testfileenh.test.ts",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should successfully create a new project with Time & Expense configuration",
+                  "fullTitle": "Costpoint PJMBASIC End-to-End Tests Project Creation should successfully create a new project with Time & Expense configuration",
+                  "timedOut": false,
+                  "duration": 51941,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "return __awaiter(this, void 0, void 0, function* () {\n    try {\n        // Generate unique project ID that matches the recording pattern\n        const generatedProjectID = yield basePO.generateRandomValue(11, \"BTL1.BR2.\", \"\");\n        console.log(`Generated Project ID: ${generatedProjectID}`);\n        // Debug before creation\n        yield pjmbasicPage.debugCurrentPage();\n        // Create new project using the enhanced method\n        yield pjmbasicPage.createNewProject({\n            projectID: generatedProjectID,\n            projectName: \"Airlines\",\n            abbreviation: \"AR\",\n            exportProject: \"Time & Expense Project\",\n            allowCharging: true,\n            defaultToOwningOrganization: true\n        });\n        // Save the project\n        yield basePO.clickSaveAndContinue();\n        // Validate success message\n        yield basePO.validateMessageTextAreaAndClose(\"Record modifications successfully completed.\");\n        console.log(`✅ Project ${generatedProjectID} created successfully`);\n    }\n    catch (error) {\n        console.error('❌ Project creation failed:', error);\n        yield pjmbasicPage.debugCurrentPage();\n        throw error;\n    }\n});",
+                  "err": {
+                    "message": "TimeoutError: locator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('#mLink208_0') to be visible\n",
+                    "estack": "locator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('#mLink208_0') to be visible\n\n    at BaseClassPO.<anonymous> (PageObject\\CP_BaseClass_PO.ts:115:28)\n    at C:\\TFS\\QEAutomation\\Selenium\\BrowserFramework\\PageObject\\CP_BaseClass_PO.ts:8:71\n    at __awaiter (PageObject\\CP_BaseClass_PO.ts:4:12)\n    at BaseClassPO.validateMessageTextAreaAndClose (PageObject\\CP_BaseClass_PO.ts:110:16)\n    at Context.<anonymous> (Tests\\CP_PJMBASIC_testfileenh.test.ts:88:30)\n    at fulfilled (Tests\\CP_PJMBASIC_testfileenh.test.ts:5:58)",
+                    "diff": null
+                  },
+                  "uuid": "7a1ea5e0-52c6-41a3-a166-a95be53e6b38",
+                  "parentUUID": "c73acc0e-6265-45c6-85ab-08303700c2af",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "7a1ea5e0-52c6-41a3-a166-a95be53e6b38"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 51941,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 120000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 120000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "11.4.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "PJMBASIC_enh",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "reports",
+        "reportFilename": "PJMBASIC_enh",
+        "quiet": "false",
+        "overwrite": "true",
+        "html": "true",
+        "json": "true"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

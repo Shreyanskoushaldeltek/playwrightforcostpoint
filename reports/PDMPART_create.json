@@ -1,0 +1,164 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-06-04T06:16:22.706Z",
+    "end": "2025-06-04T06:17:33.922Z",
+    "duration": 71216,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "46dff8f4-f5b7-4da9-8add-0163fdba0bcb",
+      "title": "",
+      "fullFile": "C:\\TFS\\QEAutomation\\Selenium\\BrowserFramework\\Tests\\CP_PDMPART.test.ts",
+      "file": "\\Tests\\CP_PDMPART.test.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4dfa98d2-dfe0-4cd5-bdcd-5edbeb326065",
+          "title": "Costpoint Login Automation",
+          "fullFile": "C:\\TFS\\QEAutomation\\Selenium\\BrowserFramework\\Tests\\CP_PDMPART.test.ts",
+          "file": "\\Tests\\CP_PDMPART.test.ts",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Costpoint Login Automation\"",
+              "fullTitle": "Costpoint Login Automation \"before all\" hook in \"Costpoint Login Automation\"",
+              "timedOut": false,
+              "duration": 1479,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "return __awaiter(this, void 0, void 0, function* () {\n    browser = yield playwright_1.chromium.launch({ headless: false });\n    page = yield browser.newPage();\n    common = new CP_Common_PO_1.CommonPO(page);\n    PDMPARTPage = new CP_PDMPART_PL_PO_1.PDMPART_PO(page);\n});",
+              "err": {},
+              "uuid": "8ea9aa92-4979-4db5-9264-2155f8049a57",
+              "parentUUID": "4dfa98d2-dfe0-4cd5-bdcd-5edbeb326065",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Costpoint Login Automation\"",
+              "fullTitle": "Costpoint Login Automation \"after all\" hook in \"Costpoint Login Automation\"",
+              "timedOut": false,
+              "duration": 334,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "return __awaiter(this, void 0, void 0, function* () {\n    yield browser.close();\n});",
+              "err": {},
+              "uuid": "44cfa3f4-3e18-4d98-9d07-92cd2e5cd43f",
+              "parentUUID": "4dfa98d2-dfe0-4cd5-bdcd-5edbeb326065",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Test 1: Login to Costpoint and navigate to App",
+              "fullTitle": "Costpoint Login Automation Test 1: Login to Costpoint and navigate to App",
+              "timedOut": false,
+              "duration": 44122,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "return __awaiter(this, void 0, void 0, function* () {\n    yield common.navigate();\n    (0, chai_1.expect)(yield page.content()).to.include('Log In');\n    yield common.LoginWithUsernamePassword(\"CPSUPERUSER\", \"CPSUPERUSER\");\n    yield common.navigateToApp(\"PDMPART\");\n    yield common.takeScreenshot('Navigate to PDMPART');\n});",
+              "err": {},
+              "uuid": "677ed9b5-3c55-4e6f-92b0-1af201e42f0a",
+              "parentUUID": "4dfa98d2-dfe0-4cd5-bdcd-5edbeb326065",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test 2: PDMPART-Create Parts",
+              "fullTitle": "Costpoint Login Automation Test 2: PDMPART-Create Parts",
+              "timedOut": false,
+              "duration": 25272,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "return __awaiter(this, void 0, void 0, function* () {\n    const PartID = yield common.generateRandomValue(10, \"PART\", \"EA\");\n    console.log(\"Generated:\" + PartID);\n    yield PDMPARTPage.CreateNewPart(PartID, \"NewPart\", \"EA\", \"Obsolete\", \"Make\", \"Tool\");\n    yield common.takeScreenshot('Create New Part');\n    yield common.clickSaveAndContinue();\n    yield common.takeScreenshot('Click on Save and Continue');\n});",
+              "err": {},
+              "uuid": "ff4b5dd8-e997-4cea-b4cc-0e1c427f3594",
+              "parentUUID": "4dfa98d2-dfe0-4cd5-bdcd-5edbeb326065",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "677ed9b5-3c55-4e6f-92b0-1af201e42f0a",
+            "ff4b5dd8-e997-4cea-b4cc-0e1c427f3594"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 69394,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 60000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "11.4.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "reports",
+        "reportFilename": "report",
+        "quiet": "true",
+        "overwrite": "true",
+        "html": "true",
+        "json": "true"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
